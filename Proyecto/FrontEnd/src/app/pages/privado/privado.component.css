@@ -1,0 +1,54 @@
+/* styles.css (or component's styleUrls) */
+
+.sidebar {
+  min-height: 100vh;
+  z-index: 10;
+  padding: 0;
+  position: relative;
+  width: 15%;
+  transition: 0.5s;
+}
+
+.main {
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  background-image: url(../../../assets/fondo-main.jpg);
+  background-size: cover;
+  color: white;
+  padding: 10px 40px;
+  overflow: auto;
+  position: relative;
+  transition: 0.5s;
+}
+
+.sidebar.expanded {
+  width: 15%;
+}
+
+.sidebar.collapsed {
+  width: 0;
+}
+
+.main.expanded {
+  width: 85%;
+}
+
+.sidebar_boton {
+  position: sticky;
+  top: 10px;
+  left: -20px;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+  background-color: #0d66ec;
+}
+
+
+.sidebar_boton .mat-icon {
+  transition: transform 0.5s;
+}
+
+.sidebar_boton .mat-icon.rotate {
+  transform: rotate(180deg);
+}

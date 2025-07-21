@@ -1,0 +1,41 @@
+<div class="container">
+  <div id="particles-js"></div>
+  <div class="container2">
+    <div class="login text-center d-flex">
+      <div class="row">
+        <div class="col-12 col-xl-7 bg-dark fondo-container">
+          <div class="fondo">
+            <h2>logística inteligente</h2>
+            <h1>LogistiXperts</h1>
+            <div class="hr"></div>
+            <p>
+              ¡Bienvenido al portal de gestión logística de muelles de entrega!
+              Aquí podrás gestionar tus entregas de forma eficiente y rápida.
+              ¡Gracias por confiar en nosotros!</p>
+          </div>
+        </div>
+        <div class="col-12 col-xl-5 bg-danger fondo-form">
+          <form class="custom-form">
+            <!-- Email -->
+            <mat-form-field class="password">
+              <mat-label>Email</mat-label>
+              <input matInput type="email" name="email" required [(ngModel)]="email" autocomplete="email">
+            </mat-form-field>
+            <!-- Contraseña -->
+            <mat-form-field class="password">
+              <mat-label>Contraseña</mat-label>
+              <input matInput type="{{ hide ? 'password' : 'text' }}" name="password" required [(ngModel)]="password"
+                autocomplete="current-password">
+              <button mat-icon-button matSuffix (click)="hide= !hide"
+                [attr.aria-label]="hide ? 'Hide password' : 'Show password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+              </button>
+            </mat-form-field>
+            <button type="submit" class="boton_login" (click)="login()">Entrar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</div>

@@ -1,0 +1,7 @@
+C:\ICP_Practicas\Proyecto\BackEnd\API-Proyecto\API-Proyecto\obj\Release\net6.0\API-Proyecto.csproj.AssemblyReference.cache
+C:\ICP_Practicas\Proyecto\BackEnd\API-Proyecto\API-Proyecto\obj\Release\net6.0\API-Proyecto.GeneratedMSBuildEditorConfig.editorconfig
+C:\ICP_Practicas\Proyecto\BackEnd\API-Proyecto\API-Proyecto\obj\Release\net6.0\API-Proyecto.AssemblyInfoInputs.cache
+C:\ICP_Practicas\Proyecto\BackEnd\API-Proyecto\API-Proyecto\obj\Release\net6.0\API-Proyecto.AssemblyInfo.cs
+C:\ICP_Practicas\Proyecto\BackEnd\API-Proyecto\API-Proyecto\obj\Release\net6.0\API-Proyecto.csproj.CoreCompileInputs.cache
+C:\ICP_Practicas\Proyecto\BackEnd\API-Proyecto\API-Proyecto\obj\Release\net6.0\API-Proyecto.MvcApplicationPartsAssemblyInfo.cs
+C:\ICP_Practicas\Proyecto\BackEnd\API-Proyecto\API-Proyecto\obj\Release\net6.0\API-Proyecto.MvcApplicationPartsAssemblyInfo.cache

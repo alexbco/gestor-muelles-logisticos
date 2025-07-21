@@ -1,0 +1,52 @@
+.table-container {
+  max-height: 350px;
+  min-height: 360px;
+  overflow-y: auto;
+  width: 100%;
+}
+.table thead {
+  position: sticky;
+  top: 0;
+  background-color: #f8f9fa;
+}
+
+.table td {
+  background-color: aliceblue;
+}
+
+.cita {
+  cursor: pointer;
+}
+.cita:hover td{
+  background-color: rgb(210, 226, 241) !important;
+}
+
+.informacion {
+  background-color: rgb(248, 250, 182) !important;
+  transition: 1s;
+  max-height: 500px;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.desplegar-info {
+  animation-name: desplegar;
+  animation-duration: 0.3s;
+}
+
+thead tr{
+  margin-bottom: 10px;
+  z-index: 99000;
+}
+
+@keyframes desplegar {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+

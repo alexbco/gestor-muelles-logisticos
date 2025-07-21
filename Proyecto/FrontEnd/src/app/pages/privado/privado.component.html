@@ -1,0 +1,20 @@
+<!-- app.component.html -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div [ngClass]="{'sidebar': true, 'expanded': !hide, 'collapsed': hide}">
+      <!-- Agrega el contenido de tu sidebar aquí -->
+      <app-sidebar (menuOptionSelected)="toggleSidebar()"></app-sidebar>
+    </div>
+    <div class="main" [ngClass]="{'expanded': !hide}">
+      <button mat-mini-fab color="primary" class="sidebar_boton" (click)="toggleSidebar()">
+        <mat-icon [ngClass]="{'rotate': !sidebarCollapsed}">{{ sidebarCollapsed ? 'menu' : 'close' }}</mat-icon>
+      </button>
+      
+
+      <!-- Paginas controladas por el routing -->
+      <router-outlet></router-outlet>
+      <!-- Boton para sidebar -->
+    </div>
+  </div>
+</div>

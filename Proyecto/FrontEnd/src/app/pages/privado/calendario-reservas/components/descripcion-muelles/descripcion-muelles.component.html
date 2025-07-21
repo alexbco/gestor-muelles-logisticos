@@ -1,0 +1,22 @@
+<ng-container *ngIf="!loading;else NoData">
+  <ng-container *ngIf="muelles_disponibles.length > 0; else NoMuelles">
+    <ul class="mt-4">
+      <li *ngFor="let muelle of muelles_disponibles" class="muelle-item">
+        <h3>{{ muelle.nombre }}</h3>
+        <p>{{ getDescripcionMuelle(muelle.tipoCamionID) }}</p>
+      </li>
+    </ul>
+  </ng-container>
+</ng-container>
+
+
+<ng-template #NoData>
+  <img src="../../../../assets/loader.gif" alt="Loader" style="width: 100px; margin: 130px;">
+</ng-template>
+
+<ng-template #NoMuelles>
+  <div>
+    <h2>No hay muelles disponibles.</h2>
+  </div>
+</ng-template>
+

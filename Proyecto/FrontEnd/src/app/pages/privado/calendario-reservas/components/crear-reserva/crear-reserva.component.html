@@ -1,0 +1,46 @@
+<ng-container *ngIf="!loading; else loadingSpinner">
+  <div class="table-responsive mt-4" *ngIf="muelles_disponibles.length > 0; else NoMuelles">
+
+    
+    <table class="table table-bordered table-striped">
+      <!-- Cabecera de la tabla -->
+      <thead>
+        <tr>
+          <th></th>
+          <ng-container *ngFor="let franja of franjas">
+            <th class="cabecero_horas">{{ franja.horaInicio | slice:0:5 }} - {{ franja.horaFinal | slice:0:5 }}</th>
+          </ng-container>
+        </tr>
+      </thead>
+      <!-- Contenido de la tabla -->
+      <tbody>
+        <tr *ngFor="let muelle of muelles_disponibles">
+          <th>{{ muelle.nombre }}</th>
+          <td *ngFor="let franja of franjas">
+            <ng-container *ngIf="!ComprobarReserva(muelle.id, franja.id); else reservado">
+              <i (click)="openDialogReservar(muelle.id, franja.id)" class="fa fa-plus-circle" aria-hidden="true"></i>
+            </ng-container>
+            <ng-template #reservado>
+              <span style="color: red;">Reservado</span>
+              <p class="cancelar_reserva" (click)="borrarReserva(muelle, franja)" *ngIf="cita_de_usuario_registrado == true">Cancelar reserva</p>
+            </ng-template>
+          </td>
+        </tr>      
+      </tbody>
+    </table>
+
+    
+  </div>
+
+</ng-container>
+
+
+<ng-template #loadingSpinner>
+  <img src="../../../../assets/loader.gif" alt="Loader" style="width: 100px; margin: 200px;">
+</ng-template>
+
+<ng-template #NoMuelles>
+  <div>
+    <h2>No hay muelles disponibles.</h2>
+  </div>
+</ng-template>

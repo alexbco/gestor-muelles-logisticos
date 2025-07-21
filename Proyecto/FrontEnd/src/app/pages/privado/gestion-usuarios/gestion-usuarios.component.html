@@ -1,0 +1,121 @@
+<div class="container">
+
+  <div class="four">
+    <h1><span>Seccion</span> Gestion de <em>Usuarios</em></h1>
+  </div>
+
+  <div class="container2">
+
+    <h1><span>Listado de usuarios</span></h1>
+
+  <mat-form-field class="mt-5">
+    <mat-label>Filtro</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ej. Sara" #input>
+  </mat-form-field>
+
+  <div class="table-container" *ngIf="!loading; else loadingSpinner">
+
+    <table [@fadeInOut] mat-table [dataSource]="dataSource"
+      class="mat-elevation-z8 table table-striped">
+
+      <!-- Checkbox Column -->
+      <ng-container matColumnDef="select">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-checkbox (change)="$event ? toggleAllRows() : null"
+            [checked]="selection.hasValue() && isAllSelected()"
+            [indeterminate]="selection.hasValue() && !isAllSelected()"
+            [aria-label]="checkboxLabel()">
+          </mat-checkbox>
+        </th>
+        <td mat-cell *matCellDef="let row">
+          <mat-checkbox (click)="$event.stopPropagation()"
+            (change)="$event ? selection.toggle(row) : null"
+            [checked]="selection.isSelected(row)"
+            [aria-label]="checkboxLabel(row)"
+            [disabled]="row.perfil.nombre === 'Administrador'">
+          </mat-checkbox>
+        </td>
+      </ng-container>
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let element"> {{element.usuario}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="perfil">
+        <th mat-header-cell *matHeaderCellDef> Perfil </th>
+        <td mat-cell *matCellDef="let element"> {{element.perfil.nombre}} </td>
+      </ng-container>
+
+      <!-- Aqui se hace la creación de la tabla -->
+      
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+        (click)="selection.toggle(row)">
+      </tr>
+
+
+      <!-- Row shown when there is no matching data. -->
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell pb-4" colspan="5">No hay datos que coincidan con el
+          filtro "{{input.value}}"</td>
+      </tr>
+
+    </table>
+  </div>
+
+  <ng-template #loadingSpinner> 
+    <img src="../../../../assets/loader.gif" alt="Loader" style="width: 100px; margin: 200px;">
+  </ng-template>
+  
+  <!-- Botones de añadir, borrar y aztualizar usuarios -->
+  <div class="botones p-4" [@scaleInOut]>
+    <div class="demo-button-container">
+      <button
+        mat-raised-button
+        [disabled]="this.selection.selected.length> 0"
+        (click)="openDialogAgregarUsuario()"
+        class="demo-button p-4 m-2 boton">
+        Añadir usuario
+      </button>
+    </div>
+
+    <div class="demo-button-container">
+      <button
+      mat-raised-button
+      [disabled]="!(this.selection.selected.length === 1) || this.selection.selected[0].perfil.nombre === 'Administrador'"
+      (click)="openDialogActualizarUsuario()"
+      class="demo-button p-4 m-2 boton">
+      Actualizar usuario
+    </button>
+    
+    </div>
+
+    <div class="demo-button-container">
+      <button mat-raised-button
+      [disabled]="!this.selection.selected.length || hasAdminUser()"
+      (click)="openDialogBorrarUsuario()"
+      class="demo-button p-4 m-2 boton">
+      Eliminar usuario
+    </button>
+    
+    </div>
+  </div>
+
+
+</div>  
+</div>

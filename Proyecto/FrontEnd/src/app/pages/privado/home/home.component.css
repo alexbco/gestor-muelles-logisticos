@@ -1,0 +1,475 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2%;
+  padding: 3%;
+  width: 100%;
+  overflow: hidden;
+  background-image: url(../../../../assets/fondo-componente.avif);
+  background-image: linear-gradient(rgba(120, 176, 221, 0.301), rgba(163, 50, 112, 0.76)), url(../../../../assets/fondo-componente.avif);
+
+  /* background-color: rgba(205, 207, 230, 0.822); */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.container2 {
+  text-align: center;
+  margin-top: 2%;
+  padding: 0px;
+  width: 100%;
+  max-height: 95%;
+  background-image: url(../../../../assets/fondo-componente.avif);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Templates */
+
+h1 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: #080808;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+h1 span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1.3;
+}
+
+h1 em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* === HEADING STYLE #4 === */
+.four h1 {
+  text-align: center;
+  padding-bottom: 0.7em;
+}
+
+.four h1 span {
+  font-weight: 300;
+  word-spacing: 3px;
+  line-height: 2em;
+  padding-bottom: 0.35em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.four h1:before {
+  position: absolute;
+  left: -30px;
+  bottom: 0;
+  width: 250px;
+  height: 5px;
+  content: "";
+  margin-left: -35px;
+  background-color: rgb(14, 39, 223);
+}
+
+/* css nuevo */
+
+.jumbotron {
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  padding: 100px;
+  margin: 0px;
+  margin-bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.jumbotron video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+  z-index: -1;
+}
+
+
+.jumbotron h1 {
+  position: relative;
+  z-index: 1;
+  color: rgb(221, 186, 32);
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.container2 {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ---------------------------- Dashboard ---------------------------- */
+
+.dashboard-card:hover {
+  transform: scale(0.9);
+  filter: brightness(110%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+
+.dashboard-title {
+  color: #080808;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.calendario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red !important;
+  width: 100%;
+  height: 100%;
+}
+
+
+.config {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red !important;
+  width: 100%;
+  height: 100%;
+}
+
+.usuarios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red !important;
+  width: 100%;
+  height: 100%;
+}
+
+.dashboard-container{
+  background-image: url("../../../../assets/fondo-dashboard.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dashboard{
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  flex-direction: column;
+  height: auto;
+  border-radius: 10px;
+  width: 80%;
+  padding: 50px;
+  position: relative;
+  background-image: linear-gradient(
+    to right,
+    rgb(20, 20, 22),
+    rgb(161, 185, 236),
+    rgb(98, 152, 202),
+    rgb(20, 20, 22)
+  ), url(../../../../assets/fondo-componente.avif);
+    margin: 60px;
+}
+
+.vertical-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------------------------- Dashboard ---------------------------- */
+
+
+/* Tarjetas */
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  border: 0px solid !important;
+  overflow: hidden;
+
+}
+
+.card1 {
+  background-image: url(../../../../assets/dashboard1.avif);
+  background-size: cover;
+  
+}
+
+.card2 {
+  background-image: linear-gradient(rgb(131, 176, 235), rgb(184, 219, 252)), url(../../../../assets/fondo-componente.avif);
+  padding: 20px;
+
+}
+
+.card3 {
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(247, 178, 216)), url(../../../../assets/fondo-componente.avif);
+padding: 20px;
+}
+
+.card4 {
+  background-image: url(../../../../assets/dashboard3.avif);
+  background-size: cover;
+  overflow: hidden;
+
+}
+
+/* Sobre nosotros */
+
+.espacio {
+  color: black;
+  padding: 30px;
+  height: auto;
+}
+
+.espacio p {
+  transform: scale(1);
+  transition: 0.2s;
+  opacity: 1;
+  /* transform: scale(0);
+  transition: 0.2s;
+  opacity: 0;
+  top: -300px; */
+}
+
+.espacio:hover p {
+  transform: scale(1);
+  transition: 0.2s;
+  opacity: 1;
+}
+
+.sobre-nosotros{
+  background-image: url("../../../../assets/fondo-dashboard.jpg");
+  background-size: cover;
+  padding: 30px;
+}
+
+.sobre-nosotros h1 {
+  margin-bottom: 30px;
+}
+
+.espacio {
+  padding: 30px;
+  border-radius: 10px;
+  margin: 30px;
+  transition: 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.);
+  transition: 0.5s;
+}
+
+.par:hover {
+  box-shadow: 0 4px 6px rgb(147, 173, 245);
+  transform: scale(1.05);
+}
+
+.impar:hover {
+  box-shadow: 0 4px 6px rgb(253, 246, 143);
+  transform: scale(1.05);
+}
+
+.par{
+  background-color: rgb(147, 173, 245);
+  /* width: 80%; */
+  /* float: right; */
+
+}
+
+.impar{
+  background-color: rgb(253, 246, 143);
+  /* width: 80%; */
+  /* float: left; */
+
+}
+
+footer{
+  /* width: 100%;
+  padding: 10px;
+  color: black !important;
+  background-color: rgba(255, 255, 255, 0.452);
+  border-radius: 10px; */
+  margin-top: 30px;
+  margin-bottom: -40px;
+  color: rgba(5, 5, 5, 0.774);
+  font-weight: bolder !important;
+}
+
+/*------------------------------------ ANIMACION ------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css?family=Mukta:700");
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+button.learn-more {
+  width: 20rem;
+  height: auto;
+  margin-bottom: 20px;
+}
+button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+button:hover .circle {
+  width: 100%;
+}
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+button:hover .button-text {
+  color: #fff;
+}
+
+@supports (display: grid) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.625rem;
+    grid-template-areas: ". main main ." ". main main .";
+  }
+
+  #container {
+    grid-area: main;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+/* ================================================================= */
+
+.wrapper {
+  animation: scroll 100s linear infinite;
+  background: url("../../../../assets/fondo-dashboard.jpg"),
+    #111111;
+  color: #eee;
+  height: 100vh;
+  min-width: 360px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+
+@keyframes scroll {
+  100% {
+    background-position: 0px -400%;
+  }
+}
+
+/* Fallback if the operatring system prefers reduced motion*/
+@media (prefers-reduced-motion) {
+  .wrapper {
+    animation: scroll 800s linear infinite;
+  }
+}
+
+@media (min-width: 670px) {
+  .title {
+    font-size: 5rem;
+  }
+}

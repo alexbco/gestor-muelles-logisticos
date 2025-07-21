@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="four">
+    <h1><span>Seccion</span><em>Configuracion</em> de muelles</h1>
+  </div>
+
+  <div class="container2 muelles">
+
+    <div class="listado_muelles">
+      <h1><span>Listado de muelles</span></h1>
+    </div>
+
+    <ul class="mt-4" *ngIf="muelles && muelles.length > 0 && !loading; else loadingSpinner" [@fadeInOut]>
+      <li *ngFor="let muelle of muelles; let i = index" class="muelle-item" [ngClass]="{ 'activo': muelle.disponibilidad === 'Activo' }">
+        <h3>{{ muelle.nombre }}</h3>
+        <ul>
+          <li><p>{{ getDescripcionMuelle(muelle.tipoCamionID) }}</p></li>
+          <li><p>Disponibilidad: {{ muelle.disponibilidad }}</p></li>
+        </ul>
+        <i class="fas fa-cog config-icon" (click)="modificarMuelle(muelle)"></i>
+        <button [disabled]="i < 4" class="delete-button" *ngIf="perfilID !== 2">
+          <i [ngClass]="{'delete-icon': true, 'disabled': i < 4 ||perfilID === 2}" class="fas fa-trash" (click)="borrarMuelle(muelle)"></i>
+        </button>
+      </li>
+    </ul>
+    
+    <ng-template #loadingSpinner>
+      <img src="../../../../assets/loader.gif" alt="Loader" style="width: 100px; margin: 200px;">
+    </ng-template>
+    
+
+    <p *ngIf="muelles.length === 0" class="mensaje_no_muelles">No hay muelles disponibles.</p>
+
+    <i (click)="nuevoMuelle()" class="fa fa-plus-circle" aria-hidden="true" *ngIf="muelles.length<8 && perfilID !== 2" [@scaleInOut]></i>
+
+  </div>
+
+
+  <div class="container2 muelles" *ngIf="!loading; else loadingSpinner">
+
+    <h1 class="mt-4 mb-3"><span>Tipos de muelles</span></h1>
+
+    <ul class="mt-4" *ngIf="!loading; else loadingSpinner">
+      <li *ngFor="let tipo of tipo_muelles" class="muelle-item" [@fadeInOut]>
+        <h3>{{ tipo.descripcion }}</h3>
+      </li>
+    </ul>
+
+    <p *ngIf="tipo_muelles.length === 0" class="mensaje_no_muelles">No hay muelles disponibles.</p>
+
+  </div>
+
+</div>

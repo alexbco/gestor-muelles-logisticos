@@ -1,0 +1,137 @@
+<div class="container">
+  <div class="four">
+    <h1><span>Sección</span><em>Home</em></h1>
+  </div>
+  
+  <div class="container2">
+
+    
+    <!-- Jumbotron -->
+    <div class="jumbotron rounded-3">
+      <video src="../../../../assets/video-home.mp4" autoplay loop muted></video>
+      <h1 class="display-4">LogistiXperts</h1>
+      <p class="lead">Ofrecemos soluciones logísticas eficientes y confiables
+        para tus necesidades de carga y descarga.</p>
+    </div>
+  </div>
+
+  <div class="container2 sobre-nosotros">
+
+    <!-- Información de la empresa -->
+    <section>
+      <div class="espacio par">
+        <h1>Nuestra Empresa</h1>
+        <p>Somos una empresa líder en la gestión de muelles de logística,
+          brindando soluciones integrales para optimizar la cadena de
+          suministro de nuestros clientes. Con más de 10 años de experiencia
+          en el sector, hemos desarrollado una sólida reputación por nuestra
+          excelencia en el servicio y capacidad de adaptación.</p>
+      </div>
+
+      <div class="espacio impar">
+
+        <h1>Nuestro Equipo</h1>
+        <p>Contamos con un equipo altamente capacitado de profesionales en
+          logística y gestión de operaciones. Valoramos el trabajo en equipo,
+          la innovación y el compromiso con la calidad en cada aspecto de
+          nuestro negocio.</p>
+      </div>
+
+      <div class="espacio par">
+        <h1>Nuestra Experiencia</h1>
+        <p>Con clientes de diversos tamaños y sectores, hemos logrado un alto
+          nivel de satisfacción, mejorando las operaciones y reduciendo
+          costos.</p>
+      </div>
+
+      <div class="espacio impar">
+        <h1>Nuestros Resultados</h1>
+        <p>Aumentamos la eficiencia operativa de nuestros clientes en un 20%,
+          reducimos tiempos de entrega en un 15% y disminuimos costos
+          logísticos en un 10%.</p>
+      </div>
+
+      <div class="espacio par">
+        <h1>Nuestra Visión</h1>
+        <p>Nuestra visión es convertirnos en el proveedor líder de servicios
+          de gestión de muelles de logística a nivel nacional e internacional,
+          ofreciendo soluciones de vanguardia.</p>
+
+      </div>
+
+      <!-- Resto del código -->
+    </section>
+
+
+  </div>
+
+
+
+  <div class="container2">
+
+    <!-- Tarjetas -->
+    <section class="tarjetas">
+
+      <div class="card card1 rounded-0 ">
+      </div>
+
+      <div class="card card2">
+        <h1>Optimización de operaciones</h1>
+        <br>
+        <p>Nuestro sistema gestor de muelles optimiza tus operaciones logísticas al proporcionarte control centralizado y eficiente sobre el flujo de mercancías. Coordinación, programación, asignación de recursos y seguimiento en tiempo real para ahorrar tiempo y recursos.</p>
+      </div>
+      <div class="card card3">
+        <h1>Visibilidad y trazabilidad</h1>
+        <br>
+        <p>Nuestra solución ofrece visibilidad completa y trazabilidad en los muelles de logística. Seguimiento en tiempo real, ubicación exacta y actualizaciones automáticas para tomar decisiones informadas, optimizar la eficiencia y gestionar la cadena de suministro de manera efectiva.</p>
+      </div>
+
+      <div class="card card4 rounded-0">
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <div class="container2 dashboard-container">
+
+
+    <!-- Dashboard -->
+    <section class="dashboard text-center center">
+      <div id="container" class="vertical-center">
+        <button class="learn-more" routerLink="/privado/pages/calendario-reservas">
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">Reservas</span>
+        </button>
+      </div>
+    
+      <div id="container" *ngIf="perfilID < 3">
+        <button class="learn-more" routerLink="/privado/pages/configuracion">
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">Muelles</span>
+        </button>
+      </div>
+    
+      <div id="container" *ngIf="perfilID == 1">
+        <button class="learn-more" routerLink="/privado/pages/gestion-usuarios">
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">Usuarios</span>
+        </button>
+      </div>
+    </section>
+    
+
+  </div>
+
+  <!-- <footer class="text-center">
+    <h3>Todos los derechos reservados © 2023 LogistiXperts</h3>
+  </footer> -->
+
+</div>

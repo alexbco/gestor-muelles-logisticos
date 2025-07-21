@@ -1,0 +1,68 @@
+<div class="d-flex flex-column vh-100 flex-shrink-0 text-white sidebar">
+  <div class="logo">
+    <span>
+      <img src="../../../assets/logo3.png" style="width: 150px;" alt="">
+    </span>
+  </div>
+
+  <ul class="nav nav-pills flex-column mb-auto">
+
+    <li class="nav-item">
+      <a routerLink="home" routerLinkActive="active" class="nav-link" (click)="selectMenuOption()">
+        <i class="fa fa-home"></i>
+        <span class="ms-2">Home</span>
+      </a>
+    </li>
+
+    <hr>
+
+    <li class="nav-item">
+      <a routerLink="calendario-reservas" routerLinkActive="active" class="nav-link" (click)="selectMenuOption()">
+        <i class="fa fa-calendar"></i>
+        <span class="ms-2">Reservas</span>
+      </a>
+    </li>
+    
+    <hr>
+
+    <li class="nav-item" *ngIf="user.perfilID < 3">
+      <a routerLink="configuracion" routerLinkActive="active" class="nav-link" (click)="selectMenuOption()">
+        <i class="fa fa-gear"></i>        
+        <span class="ms-2">Muelles</span>
+      </a>
+    </li>
+
+    <hr *ngIf="user.perfilID < 3">
+
+
+    <li class="nav-item" *ngIf="user.perfilID == 1">
+      <a routerLink="gestion-usuarios" routerLinkActive="active" class="nav-link" (click)="selectMenuOption()">
+        <i class="fa fa-user-circle"></i>
+        <span class="ms-2">Usuarios</span>
+      </a>
+    </li>
+
+    <hr *ngIf="user.perfilID == 1">
+
+    <li class="nav-item logout">
+      <a routerLink="" class="nav-link" (click)="logout()">
+        <div class="salir">
+        <mat-icon>exit_to_app</mat-icon>
+        <span class="ms-2">Salir</span>
+        </div>
+      </a>
+    </li>
+    <hr>
+  </ul>
+
+
+
+  <!-- INFO USUARIO -->
+
+  <div class="dropdown p-3 perfil">
+    <i class="fa fa-user"></i>
+    <strong class="ms-3">{{user.usuario}} - </strong>
+    <strong style="color: rgba(170, 170, 169, 0.836);">{{user.perfilNombre}}</strong>
+  </div>
+
+</div>

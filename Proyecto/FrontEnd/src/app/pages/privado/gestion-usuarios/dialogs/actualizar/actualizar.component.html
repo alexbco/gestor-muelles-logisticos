@@ -1,0 +1,50 @@
+<h1 mat-dialog-title>Actualizar Usuario</h1>
+<div mat-dialog-content >
+  <form [formGroup]="usuarioForm" class="d-flex flex-column p-5">
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre" required autocomplete="username">
+    <mat-error *ngIf="usuarioForm.get('nombre')?.invalid && (usuarioForm.get('nombre')?.dirty || usuarioForm.get('nombre')?.touched)">
+      Nombre es requerido
+    </mat-error>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" readonly>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Contraseña</mat-label>
+    <input matInput formControlName="password" type="password" required>
+    <mat-error *ngIf="usuarioForm.get('password')?.invalid && (usuarioForm.get('password')?.dirty || usuarioForm.get('password')?.touched)">
+      <div *ngIf="usuarioForm.get('password')?.hasError('required')">La contraseña es obligatoria.</div>
+      <div *ngIf="usuarioForm.get('password')?.hasError('minlength')">La contraseña debe tener al menos 6 caracteres.</div>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Rol</mat-label>
+    <mat-select formControlName="rol">
+      <mat-option *ngFor="let role of roles" [value]="role">{{ role }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  </form>
+  
+  <!-- Add more form fields and error messages as needed -->
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button color="primary" (click)="onAgree()" [disabled]="usuarioForm.invalid || usuarioForm.pristine">Actualizar</button>
+</div>
+
+
+<!-- Para actualizar utilizar eso e ir probando para sacar en el formulario los datos del usuario que queramos actualizar -->
+<!-- <div class="bg-danger" *ngIf="this.data.datosUsuario.usuario">
+  {{this.data.datosUsuario.usuario}}
+  <br>
+  ----------------------------------------------------------------
+  <br>
+  {{this.data.datosUsuario.id}} ------------------------------- {{role}}
+</div> -->

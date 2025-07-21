@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Modificar Muelle</h1>
+<div mat-dialog-content>
+  <form [formGroup]="muelleForm" class="d-flex flex-column p-5">
+    <mat-form-field>
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre" required>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Tipo de Camión</mat-label>
+      <mat-select formControlName="tipoCamionID" required>
+        <mat-option *ngFor="let tipoCamion of tipoCamionOptions" [value]="tipoCamion">{{ tipoCamion }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Disponibilidad</mat-label>
+      <mat-select formControlName="disponibilidad" required>
+        <mat-option *ngFor="let opcion of disponibilidadOptions" [value]="opcion">{{ opcion }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-button color="primary" (click)="onAgree()" [disabled]="!muelleForm.valid || !isFormModified()">Modificar</button>
+</div>

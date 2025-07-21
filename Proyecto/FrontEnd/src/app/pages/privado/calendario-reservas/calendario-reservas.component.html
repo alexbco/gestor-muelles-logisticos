@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="four">
+    <h1><span>Sección</span> Calendario de <em>Reservas</em></h1>
+  </div>
+  <div class="row mt-3 w-100">
+    <div class="col-12 col-xl-6">
+      <!-- Calendario general -->
+      <div class="container2 calendario">
+        <h1><span>Calendario Principal</span></h1>
+        <hr>
+        <div class="calendario-principal">
+          <mat-card class="demo-inline-calendar-card">
+            <mat-calendar [(selected)]="selected" [minDate]="minDate" [@fadeInOut]></mat-calendar>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-xl-6">
+      <!-- Informe de reservas de cada día -->
+      <div class="container2 informe">
+        <h1><span>Informe de Reservas</span></h1>
+        <hr>
+        <div class="informe-diario">
+          <app-informe-reservas [selected]="selected"></app-informe-reservas>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <!-- Calendario de reservas -->
+      <div class="container2 reservas">
+        <h1 class="mb-4"><span>Calendario de Reservas</span></h1>
+        <div class="crear-reserva">
+          <app-crear-reserva [selected]="selected" [@fadeInOut]></app-crear-reserva>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <!-- Descripcion de muelles -->
+      <div class="container2 reservas descripciones">
+        <h1 class="mb-4"><span>Descripción de Muelles</span></h1>
+        <div class="crear-reserva"[@scaleInOut]>
+          <app-descripcion-muelles ></app-descripcion-muelles>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

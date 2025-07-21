@@ -1,0 +1,63 @@
+<h1 mat-dialog-title>Agregar Reserva</h1>
+<div mat-dialog-content>
+
+  <form [formGroup]="citaForm" class="d-flex flex-column p-5">
+    <mat-form-field>
+      <mat-label>Fecha</mat-label>
+      <input matInput formControlName="fecha" required readonly
+        [value]="data.fecha">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Usuario</mat-label>
+      <input matInput formControlName="usuario" required readonly
+        [value]="data.usuario.usuario">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Muelle</mat-label>
+      <input matInput formControlName="muelle" required readonly
+        [value]="data.muelle.nombre">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Franja horaria</mat-label>
+      <input matInput formControlName="franja" required readonly>
+    </mat-form-field>
+
+    <div formArrayName="mercancias">
+      <div *ngFor="let mercanciaGroup of mercanciasFormArray.controls; let i=
+        index" class="d-flex" [formGroupName]="i">
+        <mat-form-field>
+          <mat-label>Mercancia</mat-label>
+          <input matInput formControlName="mercancia" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Palets</mat-label>
+          <mat-select formControlName="palets" required>
+            <mat-option *ngFor="let palet of paletsOptions" [value]="palet" [disabled]="palet > getPaletsDisponibles()">
+              {{ palet }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+         
+          <button mat-icon-button color="warn" (click)="eliminarMercancia(i)" [disabled]="i === 0">
+          <mat-icon>delete</mat-icon>
+        </button>
+  
+      </div>
+    </div>
+
+
+    <button mat-icon-button color="primary" (click)="agregarMercancia()" [disabled]="getPaletsDisponibles()==0">
+      <mat-icon>add</mat-icon>
+    </button>
+  </form>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-button color="primary" (click)="onAgree()"
+    [disabled]="!tieneMercancias">Agregar</button>
+</div>

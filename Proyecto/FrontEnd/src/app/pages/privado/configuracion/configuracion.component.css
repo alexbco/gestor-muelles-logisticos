@@ -1,0 +1,204 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3% 8%;
+  width: 80%;
+  overflow: hidden;
+  background-image: url(../../../../assets/fondo-componente.avif);
+  background-image: linear-gradient(rgba(120, 176, 221, 0.301), rgba(163, 50, 112, 0.76)), url(../../../../assets/fondo-componente.avif);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.container2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5%;
+  padding: 5% 10%;
+  width: 100%;
+  max-height: 95%;
+  overflow: hidden;
+  background-image: url(../../../../assets/fondo-componente.avif);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* ESTILO DE TITULOS   */
+
+h1 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: #080808;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+h1 span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1.3;
+}
+
+h1 em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.four h1 {
+  text-align: center;
+  padding-bottom: 0.7em;
+}
+
+.four h1 span {
+  font-weight: 300;
+  word-spacing: 3px;
+  line-height: 2em;
+  padding-bottom: 0.35em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.four h1:before {
+  position: absolute;
+  left: 8%;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  content: "";
+  margin-left: -30px;
+  background-color: rgb(14, 39, 223);
+}
+
+/* ESTILO DE TITULOS   */
+
+.reservas h1 {
+  margin-top: -60px;
+}
+
+.muelles h1:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(216, 205, 44);
+}
+
+.muelle-item {
+  background-color: #ece7e7;
+  padding: 20px;
+  margin-bottom: 20px;
+  list-style: decimal-leading-zero;
+  /* Quitamos los marcadores */
+  position: relative;
+  width: auto;
+  min-width: 500px;
+}
+
+
+.muelle-item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.muelle-item p {
+  font-size: 14px;
+  color: #888;
+}
+
+ul {
+  color: black;
+}
+
+.config-icon {
+  font-size: 25px;
+  color: #7aa9b8;
+  cursor: pointer;
+  transition: 0.5s;
+  position: absolute;
+  right: -40px;
+  top: 25%;
+}
+
+.config-icon:hover {
+  color: #0f799d;
+
+}
+
+.muelles {
+  width: 80%;
+}
+
+.delete-icon {
+  font-size: 25px;
+  color: #888888;
+  cursor: pointer;
+  transition: 0.5s;
+  position: absolute;
+  right: -38.5px;
+  top: 55%;
+  color: rgb(248, 113, 113);
+}
+
+.delete-icon:hover {
+  color: rgb(247, 12, 12);
+}
+
+i {
+  color: rgba(70, 156, 70, 0.664);
+  transition: 0.5s;
+  display: block;
+  margin: 0 auto;
+  font-size: 60px;
+  /* Ajusta el tamaño del icono según tus necesidades */
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+i:hover {
+  color: rgb(59, 189, 59);
+
+}
+
+.mensaje_no_muelles {
+  color: black;
+  padding: 20px;
+}
+
+button{
+  border: 0px;
+  background-color: rgba(167, 214, 167, 0);
+}
+
+.activo button {
+  border: 0px;
+  cursor: default;
+  background-color: rgb(167, 214, 167);
+  font-size: 0px !important;
+  width: 0px;
+}
+
+.delete-icon.disabled {
+  color: gray;
+}
+
+.activo {
+  /* box-shadow: 0 4px 6px rgba(75, 114, 76, 0.661);  */
+  background-color: rgb(167, 214, 167);
+}
+
+.activo p {
+  color: #626262;
+}
+
+.listado_muelles {
+  margin-bottom: 20px;
+}

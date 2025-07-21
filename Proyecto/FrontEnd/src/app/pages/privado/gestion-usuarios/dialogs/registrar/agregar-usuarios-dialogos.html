@@ -1,0 +1,43 @@
+<h1 mat-dialog-title>Agregar Usuario</h1>
+<div mat-dialog-content >
+  <form [formGroup]="usuarioForm" class="d-flex flex-column p-5">
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input matInput formControlName="nombre" required autocomplete="name">
+    <mat-error *ngIf="usuarioForm.get('nombre')?.invalid && (usuarioForm.get('nombre')?.dirty || usuarioForm.get('nombre')?.touched)">
+      Nombre es requerido
+    </mat-error>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" required autocomplete="email">
+    <mat-error *ngIf="usuarioForm.get('email')?.invalid && (usuarioForm.get('email')?.dirty || usuarioForm.get('email')?.touched)">
+      Email debe ser válido
+    </mat-error>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Contraseña</mat-label>
+    <input matInput formControlName="password" type="password" required>
+    <mat-error *ngIf="usuarioForm.get('password')?.invalid && (usuarioForm.get('password')?.dirty || usuarioForm.get('password')?.touched)">
+      <div *ngIf="usuarioForm.get('password')?.hasError('required')">La contraseña es obligatoria.</div>
+      <div *ngIf="usuarioForm.get('password')?.hasError('minlength')">La contraseña debe tener al menos 6 caracteres.</div>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Rol</mat-label>
+    <mat-select formControlName="rol">
+      <mat-option *ngFor="let role of roles" [value]="role">{{ role }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  </form>
+  
+  <!-- Add more form fields and error messages as needed -->
+  
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-button color="primary" (click)="onAgree()" [disabled]="usuarioForm.invalid">Agregar</button>
+</div>

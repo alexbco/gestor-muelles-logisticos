@@ -1,0 +1,143 @@
+.sidebar {
+    height: 100%;
+    width: 100%;
+    background-color: #3c4245;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 100;
+    box-shadow: 4px 0 20px rgba(3, 14, 60, 0.9) !important; /* Sombreado en el lado derecho */
+  }
+  
+  /* Resto del código CSS... */
+  
+  .salir {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0px;
+    margin-left: -5px;
+  }
+  
+  .salir div {
+    margin-left: 10px;
+    margin-top: 1px;
+  }
+  
+  .perfil {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.3);
+    background-image: url(../../../assets/fondoklk.jpg);
+    background-size: cover;
+  }
+  
+  .nav-link:hover {
+    background-color: #525252;
+  }
+  
+  .nav-link:focus {
+    background-color: #0d66ec;
+  }
+  
+  .nav-link .fa {
+    transition: all 1s;
+  }
+  
+  .nav-link:hover .fa {
+    transform: rotate(360deg);
+  }
+  
+  .dropdown {
+    margin-top: -10px;
+  }
+  
+  li {
+    padding: 5px 10px;
+  }
+  
+  .nav-link span {
+    white-space: normal;
+    word-break: break-word;
+  }
+  
+  .nav-link {
+    color: rgb(194, 191, 191);
+    /* Color inicial de los enlaces */
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .nav-link.selected {
+    background-color: #232979;
+    /* Color de fondo del enlace seleccionado */
+    color: #fff;
+    /* Color del texto del enlace seleccionado */
+  }
+  
+  .navbar {
+    /* Estilos del navbar */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 80px; /* Anchura del navbar comprimido */
+    transition: width 0.3s ease;
+  }
+  
+  .navbar.collapsed {
+    width: 250px; /* Anchura del navbar expandido */
+  }
+  
+  .navbar-toggler {
+    margin-right: 0; /* Elimina el margen derecho del botón del navbar */
+  }
+  
+  ul {
+    padding-top: 5px;
+  }
+  
+  hr {
+    margin: 0;
+    color: #817e7e;
+  }
+  
+  .dropdown-menu {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .dropdown-menu.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .dropdown-li:hover {
+    background-color: #6b696973;
+    border-radius: 5px;
+  }
+  
+  .example-sidenav {
+    width: 200px;
+  }
+  
+  .example-sidenav-content {
+    padding: 16px;
+  }
+  
+  .sidebar.collapsed {
+  width: 0;
+}
+
+.sidebar:not(.collapsed) {
+  width: 100%;
+}

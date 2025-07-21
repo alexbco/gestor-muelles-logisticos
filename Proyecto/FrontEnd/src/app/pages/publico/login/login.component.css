@@ -1,0 +1,133 @@
+.container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.5)), url(../../../../assets/fondo.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+.container2{
+  padding: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  max-width: 60%;
+  overflow: hidden;
+}
+
+.login {
+  padding: 0;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  min-height: 400px;
+}
+
+.fondo-container {
+  padding: 0px;
+}
+
+.fondo {
+  width: 100%;
+  height: 100%;
+  background-image: url(../../../../assets/fondo-login.jpg);
+  background-size: cover;
+  padding: 40px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+img {
+  width: 150px;
+  position: absolute;
+  top: -70px;
+  right: 250px;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+h1 {
+  letter-spacing: 3px;
+}
+
+.hr {
+  margin: 20px;
+  width: 100px;
+  height: 6px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.fondo-form {
+  padding: 0px;
+}
+
+.custom-form {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2rem 3rem;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.password {
+  width: 100%;
+}
+
+.boton_login {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: none;
+  font-size: 0.875rem;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #0099ff;
+  width: 100%;
+  display: block;
+  padding: 0.875rem 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+
+.boton_login:hover {
+  background-color: blue;
+}
+
+.registrar {
+  text-decoration: none;
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#particles-js canvas {
+  background-color: white;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,58 @@
+<!-- login.component.html -->
+<div class="container">
+  <div class="login text-center d-flex">
+    <div class="row">
+
+      <div class="col-12 col-lg-7 bg-dark fondo-container">
+        <div class="fondo">
+          <h2>logística inteligente</h2>
+          <h1>LogistiXperts</h1>
+          <div class="hr"></div>
+          <p>
+            Optimiza tus entregas y mejora la eficiencia de tu negocio con
+            nuestro servicio de gestión logística de muelles. Regístrate ahora
+            para empezar a disfrutar de sus beneficios.</p>
+          <!-- <img src="../../assets/logo.PNG" alt=""> -->
+        </div>
+      </div>
+      <div class="col-12 col-lg-5 bg-danger fondo-form">
+        <form class="custom-form" method="post">
+          <h1>Registrarte</h1>
+          <input
+          type="string"
+          [(ngModel)]='nombre'
+          name="nombre"
+          placeholder="Nombre"
+          required="required" />
+          <input
+            type="email"
+            [(ngModel)]='email'
+            name="email"
+            placeholder="Correo electrónico"
+            required="required" />
+          <input
+            type="password"
+            [(ngModel)]='password'
+            name="password"
+            placeholder="Contraseña"
+            required="required"
+            />
+          <input
+            type="password"
+            [(ngModel)]="confirmPassword"
+            name="password"
+            placeholder="Repite la contraseña"
+            required="required"
+            />
+
+          <button type="submit" class="boton_login">Registrarte</button>
+          <div class="mt-4 text-white">
+            <a routerLink="/login" class="text-primary loguearse">¿Ya tienes una cuenta?</a>
+          </div>
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+</div>

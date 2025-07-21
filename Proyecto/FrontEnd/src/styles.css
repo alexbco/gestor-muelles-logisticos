@@ -1,0 +1,15 @@
+/* app/styles.css */
+
+body {
+  margin: 0;
+  /* overflow-x: hidden; */
+  height: 100%;
+  /* font-size: 2rem; */
+}
+
+
+
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import url('https://fonts.googleapis.com/css?family=Mukta:700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
