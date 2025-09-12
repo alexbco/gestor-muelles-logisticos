@@ -15,19 +15,21 @@ Aplicación web para **gestionar reservas, asignaciones y disponibilidad** de mu
 
 ## 📂 Estructura del repo
 
-/frontend/ → Angular
-/api/ → .NET Web API
-/db/ → scripts SQL (schema, seed)
-/docs/ → diagramas, arquitectura
-/screenshots/→ capturas para el README
+gestor-muelles-logisticos/
+├── frontend/ → Aplicación Angular (interfaz de usuario)
+├── backend/ → API REST .NET Core (lógica de negocio + conexión a BD)
+├── db/ → Scripts SQL (schema y datos de prueba)
+├── docs/ → Documentación y diagramas
+├── .gitignore
+└── README.md
 
 ## 🚀 Puesta en marcha
 
 ### 1) Backend (.NET)
 bash
-cd api
-dotnet restore
-dotnet run
+cd frontend
+npm install
+ng serve -o
 
 ### 2) Base de datos (SQL Server)
 Importar db/schema.sql para crear tablas.
@@ -40,10 +42,18 @@ ng serve -o
 Aplicación disponible en: http://localhost:4200
 
 ## 🧪 Usuarios de prueba
-- Administrador: admin@demo.com / 1234
 
-- Usuario: user@demo.com / 1234
-- (cámbialos si tienes otros credenciales de prueba)
+- **Sofía (Usuario)**  
+  - Email: `sofia@example.com`  
+  - Password: `sofia123`  
+
+- **Carlos (Operario)**  
+  - Email: `carlos@example.com`  
+  - Password: `carlos123`  
+
+- **Laura (Administrador)**  
+  - Email: `laura@example.com`  
+  - Password: `laura456`  
 
 ## 📷 Capturas
 
