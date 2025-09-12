@@ -1,1 +1,7 @@
 node_modules
+
+**/appsettings.Development.json
+
+**/appsettings.*.local.json
+
+.vs/
