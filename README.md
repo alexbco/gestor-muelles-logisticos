@@ -24,7 +24,9 @@ gestor-muelles-logisticos/
 ├── db/ → Scripts SQL (schema y datos de prueba)
 
 ├── docs/ → Documentación y diagramas
+
 ├── .gitignore
+
 └── README.md
 
 ## 🚀 Puesta en marcha
