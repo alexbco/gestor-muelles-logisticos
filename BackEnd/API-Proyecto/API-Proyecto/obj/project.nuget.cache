@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qFz3B0i0GxU=",
+  "dgSpecHash": "OPp2rFqNNyo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexb\\OneDrive\\Escritorio\\LogistiXperts\\BackEnd\\API-Proyecto\\API-Proyecto\\API-Proyecto.csproj",
+  "projectFilePath": "C:\\Users\\alexb\\Escritorio\\LogistiXperts\\BackEnd\\API-Proyecto\\API-Proyecto\\API-Proyecto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexb\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\alexb\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
