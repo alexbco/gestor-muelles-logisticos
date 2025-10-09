@@ -62,7 +62,7 @@ Aplicación disponible en: http://localhost:4200
   - Password: `laura456`  
 
 ## 🗂️ Documentacion
-[LogistiXperts(Documentacion)](https://github.com/alexbco/gestor-muelles-logisticos/blob/Main/docs/documentacion.pdf)
+[LogistiXperts(Documentacion)](https://github.com/alexbco/gestor-muelles-logisticos/blob/Main/docs/LogistiXperts(Documentacion))
 ## 💡 Aprendizajes
 
 Integración Angular ↔️ .NET con autenticación JWT.
