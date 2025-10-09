@@ -16,9 +16,13 @@ Aplicación web para **gestionar reservas, asignaciones y disponibilidad** de mu
 ## 📂 Estructura del repo
 
 gestor-muelles-logisticos/
+
 ├── frontend/ → Aplicación Angular (interfaz de usuario)
+
 ├── backend/ → API REST .NET Core (lógica de negocio + conexión a BD)
+
 ├── db/ → Scripts SQL (schema y datos de prueba)
+
 ├── docs/ → Documentación y diagramas
 ├── .gitignore
 └── README.md
