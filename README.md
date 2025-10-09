@@ -61,7 +61,7 @@ Aplicación disponible en: http://localhost:4200
   - Email: `laura@example.com`  
   - Password: `laura456`  
 
-## 📷 Capturas
+## 🗂️ Documentacion
 
 ## 💡 Aprendizajes
 
