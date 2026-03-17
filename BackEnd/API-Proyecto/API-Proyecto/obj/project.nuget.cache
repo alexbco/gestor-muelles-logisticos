@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OPp2rFqNNyo=",
+  "dgSpecHash": "nC2/q9T423E=",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexb\\Escritorio\\LogistiXperts\\BackEnd\\API-Proyecto\\API-Proyecto\\API-Proyecto.csproj",
+  "projectFilePath": "C:\\Users\\alexb\\Escritorio\\LogistiXpertsGitHub\\gestor-muelles-logisticos\\BackEnd\\API-Proyecto\\API-Proyecto\\API-Proyecto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexb\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\alexb\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
